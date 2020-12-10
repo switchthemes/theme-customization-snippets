@@ -1,0 +1,112 @@
+<section class="page">
+  <div class="grid">
+    <div class="grid__item one-whole page-item">
+      {% section 'page--artists--header' %}
+      {% section 'page--artists--main' %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .artists__artist {
+    display: block;
+  }
+
+  .artists__artist-thumbnail {
+    margin-bottom: 15px;
+  }
+
+  .artists__artist-description {
+    color: {{ settings.color_text }};
+  }
+
+  .artist-name--main {
+    font-size: 1.125em;
+  }
+
+  .artists-main-section {
+    margin-top: 0;
+  }
+
+  .artists__page-content h1 {
+    margin-bottom: 15px;
+  }
+
+  .artists__page-content {
+    margin-bottom: 45px;
+  }
+
+  .artists__secondary-title {
+    margin-top: 45px;
+  }
+
+  a[href] .gallery-image,
+  a[href] .gallery-image-cropped,
+  a[href] .gallery-placeholder--cropped,
+  a[href] .gallery-placeholder-container {
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  a[href]:hover .gallery-image,
+  a[href]:hover .gallery-image-cropped,
+  a[href]:hover .gallery-placeholder--cropped,
+  a[href]:hover .gallery-placeholder-container {
+    opacity: 0.6;
+  }
+
+  @media screen and (max-width: 768px) {
+    .artists__artist {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    .artists__artist--grid {
+      margin-bottom: 30px;
+    }
+
+
+    .artists-main-section {
+      margin-top: 45px;
+    }
+
+    .artists__secondary-title {
+      margin-top: 90px;
+    }
+
+    .artists__secondary-title + .artists-main-section {
+      margin-top: 30px;
+    }
+
+    .artist-wrapper--alternating {
+      margin-top: 45px;
+    }
+
+    .artist-wrapper--alternating .artists__artist {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-bottom: 45px;
+    }
+
+    .artist-wrapper--alternating .artists__artist > div {
+      flex: 0 0 50%;
+    }
+
+    .artist-wrapper--alternating .artists__artist-content {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 45px;
+    }
+
+    .artist-wrapper--alternating:nth-child(even) .artists__artist-thumbnail {
+      order: 2;
+    }
+
+    .artist-wrapper--alternating:nth-child(even) .artists__artist-content {
+      order: 1;
+    }
+  }
+
+</style>
